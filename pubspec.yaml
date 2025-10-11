@@ -9,11 +9,44 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
+  
+  table_calendar: ^3.2.0                # 달력 기능 제공 플러그인
+  flutter_time_picker_spinner: ^2.0.0   # 시간 선택기 제공 플러그인
+  intl: ^0.20.2                         # 다국어화 기능 제공 플러그인
+  drift: ^2.28.1                        # Drift ORM 플러그인
+  drift_flutter: ^0.2.5                 # SQLite 데이터베이스 플러그인
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
   flutter_lints: ^5.0.0
+  drift_dev: ^2.28.1                    # Drift 코드 생성 기능 관련 플러그인
+  build_runner: ^2.6.0                  # Flutter 코드 생성 기능을 제공해주는 플러그인
 
 flutter:
   uses-material-design: true
+  assets:
+    - assets/images/about/
+    - assets/images/background/
+    - assets/images/icon/
+  fonts:
+    - family: Pretendard
+      fonts:
+        - asset: assets/font/Pretendard-Black.otf
+          weight: 900
+        - asset: assets/font/Pretendard-ExtraBold.otf
+          weight: 800
+        - asset: assets/font/Pretendard-Bold.otf
+          weight: 700
+        - asset: assets/font/Pretendard-SemiBold.otf
+          weight: 600
+        - asset: assets/font/Pretendard-Medium.otf
+          weight: 500
+        - asset: assets/font/Pretendard-Regular.otf
+          weight: 400
+        - asset: assets/font/Pretendard-Light.otf
+          weight: 300
+        - asset: assets/font/Pretendard-ExtraLight.otf
+          weight: 200
+        - asset: assets/font/Pretendard-Thin.otf
+          weight: 100
