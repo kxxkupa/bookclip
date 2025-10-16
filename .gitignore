@@ -1,50 +1,77 @@
-# Miscellaneous
-*.class
-*.log
-*.pyc
-*.swp
+# =========================
+# 1) Secrets / Env
+# =========================
+.env
+.env.*
+!.env.example
+dart_defines*.json
+!dart_defines.example.json
+android/key.properties
+*.jks
+*.keystore
+
+# =========================
+# 2) OS / Misc
+# =========================
 .DS_Store
+*.swp
+*.log
+*.class
+*.pyc
 .atom/
-.build/
-.buildlog/
 .history
 .svn/
-.swiftpm/
-migrate_working_dir/
 
-# IntelliJ related
+# =========================
+# 3) IDE
+# =========================
+# IntelliJ / Android Studio
 *.iml
 *.ipr
 *.iws
 .idea/
 
-# The .vscode folder contains launch configuration and tasks you configure in
-# VS Code which you may wish to be included in version control, so this line
-# is commented out by default.
+# VS Code: 확장/설정은 공유 가능
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
 
-# Flutter/Dart/Pub related
-**/doc/api/
-**/ios/Flutter/.last_build_id
-/ios/.symlinks/
+# =========================
+# 4) Flutter / Dart / Pub
+# =========================
 .dart_tool/
 .packages
-.flutter-plugins
-.flutter-plugins-dependencies
-.vscode/
 .pub-cache/
 .pub/
+.flutter-plugins
+.flutter-plugins-dependencies
 /build/
-/coverage/
+**/doc/api/
+coverage/
 
-# Symbolication related
-app.*.symbols
+# iOS
+**/ios/Flutter/.last_build_id
+**/ios/.symlinks/
+**/ios/Pods/
+**/ios/DerivedData/
+**/ios/Runner.xcworkspace/xcuserdata/
+**/ios/Runner.xcodeproj/project.xcworkspace/xcuserdata/
+**/ios/Runner.xcodeproj/xcuserdata/
 
-# Obfuscation related
-app.*.map.json
-
-# Android Studio will place build artifacts here
+# Android
+/android/.gradle
+/android/local.properties
 /android/app/debug
 /android/app/profile
 /android/app/release
-/android/local.properties
-/android/.gradle
+
+# Linux/Windows/macOS (선택: 데스크탑 타깃 빌드 산출물)
+# /linux/flutter/ephemeral/
+# /windows/flutter/ephemeral/
+# /macos/Flutter/ephemeral/
+
+# =========================
+# 5) Symbolication / Obfuscation
+# =========================
+app.*.symbols
+app.*.map.json

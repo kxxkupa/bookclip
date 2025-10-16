@@ -1,7 +1,9 @@
-// 프로젝트 명 : 북클립
-// 파일명 : icon.dart
-// 파일 경로 : /lib/common/const/
-// 분류 : 공통 아이콘
+// ============================================
+// Project: 북클립
+// File: lib/common/const/icon.dart
+// Role: Icon 모음
+// Author: 김건우
+// ============================================
 
 class AppIcons {
   static const iconPath = 'assets/images/icon';

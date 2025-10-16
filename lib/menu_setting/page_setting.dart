@@ -1,3 +1,10 @@
+// ============================================
+// Project: 북클립
+// File: lib/menu_setting/page_setting.dart
+// Role: 설정 페이지
+// Author: 김건우
+// ============================================
+
 import 'package:flutter/material.dart';
 
 class PageSetting extends StatelessWidget {

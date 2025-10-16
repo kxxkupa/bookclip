@@ -1,7 +1,9 @@
-// 프로젝트 명 : 북클립
-// 파일명 : app_page.dart
-// 파일 경로 : /lib/common/screen/
-// 분류 : 메뉴 PageView
+// ============================================
+// Project: 북클립
+// File: lib/common/screen/app_page.dart
+// Role: 메뉴 PageView
+// Author: 김건우
+// ============================================
 
 import 'package:bookclip/common/widget/app_menu.dart';
 import 'package:bookclip/menu_home/page_main.dart';
@@ -22,9 +24,6 @@ class _AppPageState extends State<AppPage> {
   int? _targetIndex;                // animateToPage의 최종 목표
   bool _animating = false;
   final PageController _controller = PageController();
-
-  // 하단 메뉴에 가리지 않도록 살짝 띄워줌
-  static const double _contentBottomPadding = 108.0;
 
   // 보여줄 페이지들
   final _pages = const [
@@ -66,27 +65,20 @@ class _AppPageState extends State<AppPage> {
 
   @override
   Widget build(BuildContext context) {
-    final bottomSafe = MediaQuery.of(context).padding.bottom; // 하단 안전 영역
-
     return Scaffold(
       extendBody: true, // 화면을 하단 메뉴 아래까지 확장
       body: Stack(
         children: [
           // 실제 페이지 내용
-          Padding(
-            padding: EdgeInsets.only(
-              bottom: _contentBottomPadding + bottomSafe, // 메뉴에 안 가리게 여백
-            ),
-            child: PageView(
-              controller: _controller,
-              physics: const NeverScrollableScrollPhysics(),
-              onPageChanged: (i) {
-                if (!_animating || (_targetIndex != null && i == _targetIndex)) {
-                  setState(() => _index = i);
-                }
-              },
-              children: _pages,
-            ),
+          PageView(
+            controller: _controller,
+            physics: const NeverScrollableScrollPhysics(),
+            onPageChanged: (i) {
+              if (!_animating || (_targetIndex != null && i == _targetIndex)) {
+                setState(() => _index = i);
+              }
+            },
+            children: _pages,
           ),
 
           // 하단 메뉴 (화면 위에 겹쳐서 표시)

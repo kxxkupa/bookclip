@@ -1,7 +1,9 @@
-// 프로젝트 명 : 북클립
-// 파일명 : app_menu.dart
-// 파일 경로 : /lib/common/widget/
-// 분류 : 메뉴
+// ============================================
+// Project: 북클립
+// File: lib/common/widget/app_menu.dart
+// Role: 공통 -> 메뉴
+// Author: 김건우
+// ============================================
 
 import 'package:bookclip/common/const/icon.dart';
 import 'package:bookclip/common/const/public_style.dart';

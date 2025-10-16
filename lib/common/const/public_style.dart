@@ -1,7 +1,9 @@
-// 프로젝트 명 : 북클립
-// 파일명 : public_style.dart
-// 파일 경로 : /lib/common/const/
-// 분류 : 공통 스타일
+// ============================================
+// Project: 북클립
+// File: lib/common/const/public_style.dart
+// Role: 스타일 모음
+// Author: 김건우
+// ============================================
 
 import 'package:flutter/material.dart';
 
@@ -11,6 +13,9 @@ class AppColors {
 
   // 폰트 색상 (#46433F)
   static const fontColor = Color(0xFF46433F);
+  
+  // 폰트 색상 light (#AFABA5)
+  static const fontColorLight = Color(0xFFAFABA5);
 
   // 하단 네비게이션 (#81775C)
   static const bottomNavigationColor = Color(0xFF81775C);
@@ -46,18 +51,18 @@ class AppTextStyles {
 
 // 공통 박스 (#F3F0ED)
 class AppBoxs extends StatelessWidget {
-  final double? marginHorizontal;
   final double? marginVertical;
-  final double? paddingHorizontal;
+  final double? marginHorizontal;
   final double? paddingVertical;
+  final double? paddingHorizontal;
   final Widget content;
 
   const AppBoxs({
     super.key,
-    this.marginHorizontal,
     this.marginVertical,
-    this.paddingHorizontal,
+    this.marginHorizontal,
     this.paddingVertical,
+    this.paddingHorizontal,
     required this.content,
   });
 
@@ -74,7 +79,7 @@ class AppBoxs extends StatelessWidget {
             color: Colors.black.withValues(alpha: 0.25),
             offset: Offset(0, 1),
             blurRadius: 6.0,
-            spreadRadius: 0.0
+            spreadRadius: 0.0,
           ),
         ]
       ),

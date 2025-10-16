@@ -1,7 +1,9 @@
-// 프로젝트 명 : 북클립
-// 파일명 : page_library.dart
-// 파일 경로 : /lib/menu_library/
-// 분류 : 메뉴 - 도서관 - 메인
+// ============================================
+// Project: 북클립
+// File: lib/menu_library/page_library.dart
+// Role: 도서관 페이지
+// Author: 김건우
+// ============================================
 
 import 'package:flutter/material.dart';
 

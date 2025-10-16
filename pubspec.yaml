@@ -10,25 +10,34 @@ dependencies:
   flutter:
     sdk: flutter
   
+  flutter_localizations:
+    sdk: flutter
+  
+  shared_preferences: ^2.5.3            # 저장/복원 플러그인
   table_calendar: ^3.2.0                # 달력 기능 제공 플러그인
   flutter_time_picker_spinner: ^2.0.0   # 시간 선택기 제공 플러그인
   intl: ^0.20.2                         # 다국어화 기능 제공 플러그인
-  drift: ^2.28.1                        # Drift ORM 플러그인
-  drift_flutter: ^0.2.5                 # SQLite 데이터베이스 플러그인
+  drift: ^2.28.2                        # Drift ORM 플러그인
+  drift_flutter: ^0.2.7                 # SQLite 데이터베이스 플러그인
+  http: ^1.5.0                          # HTTP 통신을 위한 플러그인
+  flutter_dotenv: ^6.0.0                # 키 환경변수 관리
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  flutter_lints: ^5.0.0
-  drift_dev: ^2.28.1                    # Drift 코드 생성 기능 관련 플러그인
-  build_runner: ^2.6.0                  # Flutter 코드 생성 기능을 제공해주는 플러그인
+  
+  flutter_lints: ^6.0.0
+  drift_dev: ^2.28.3                    # Drift 코드 생성 기능 관련 플러그인
+  build_runner: ^2.9.0                  # Flutter 코드 생성 기능을 제공해주는 플러그인
 
 flutter:
   uses-material-design: true
   assets:
+    - .env.dev
     - assets/images/about/
     - assets/images/background/
     - assets/images/icon/
+    - assets/images/button/
   fonts:
     - family: Pretendard
       fonts:
